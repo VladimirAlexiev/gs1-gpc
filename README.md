@@ -21,8 +21,9 @@ Dependencies:
 
 Problems and fixes:
 - DONE: remove heading rows, MnM Import doesn't like them
-- DONE: lowercase the names; especially bug problem for Attribute Values (see above item): easy but is incorrect for some cases (eg value "ROMANIA - UNCLASSIFIED")
-- DONE: move trailing "Other", "Variety Packs" and " - UNCLASSIFIED" from name to descr to improve matching; and collapse such bricks that are not appropriate for WD into the parent class
+- DONE: lowercase the names; especially big problem for Attribute Values (eg created Q104244383 AUTOMATIC PET WATER DISH), is incorrect for some cases (eg value "ROMANIA")
+- DONE: cut out trailing " - UNCLASSIFIED"
+- DONE: move trailing "Other", "Variety Packs" from name to descr to improve matching; and collapse such bricks that are not appropriate for WD into the parent class
 - DONE: sort Attribute Values by popularity to incentivize matching
 - DONE: convert names to **singular** (module `Lingua::EN::PluralToSingular`)
 - TODO: list the Attribute Type(s) that pertain to a Value in order to clarify the value: HARD

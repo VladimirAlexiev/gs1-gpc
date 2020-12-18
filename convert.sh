@@ -9,4 +9,4 @@ perl -0pe "s{([^>])\n}{$1}g" "GS1 Combined Published  as at 01062020 EN.xml" > g
 perl convert.pl gpc.xml > gpc.tsv
 grep -vP "(attType|attValue)" gpc.tsv > gpc-hier.tsv
 grep  -P "attType"  gpc.tsv |sort | uniq > gpc-attType.tsv
-grep  -P "attValue" gpc.tsv |sort | uniq -c | sort -rn > gpc-attValue.tsv
+grep  -P "attValue" gpc.tsv |sort | uniq -c | sort -rn |cut -b9- > gpc-attValue.tsv
