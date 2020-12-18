@@ -1,9 +1,14 @@
 # gs1-gpc
 
 Convert GS1 GPC codes to TSV for [import](https://mix-n-match.toolforge.org/import.php) to Wikidata Mix-n-Match.
+
+Links:
 - https://www.gs1.org/standards/gpc: source, file `GS1 Combined Published  as at 01062020 EN.xml`
 - https://www.wikidata.org/wiki/Wikidata:Property_proposal/GS1_GPC_brick_code: discussion and details
 - https://www.wikidata.org/wiki/Property:P8957: property
+- https://www.wikidata.org/wiki/Topic:Vzu6yjsddsvy5wd8: asking for help from Magnus Manske
+- https://mix-n-match.toolforge.org/#/catalog/4062 (to update): GPC hierarchical thesaurus (`segment>family>class>brick`)
+- https://mix-n-match.toolforge.org/#/catalog/4063 (to update): GPC attribute values
 
 Files:
 - `convert.bat`: joins broken description lines in source file, invokes perl script, dispatches output to 3 files
@@ -11,9 +16,7 @@ Files:
 - `convert.pl`: converts XML to TSV while making various fixes
 - `gpc.tsv`: code, name, description (in parentheses: GPC kind: `segment, family, class, brick, attValue, attType`)
 - `gpc-hier.tsv`: hierarchical thesaurus (`segment>family>class>brick`)
-  - Loaded to https://mix-n-match.toolforge.org/#/catalog/4062 (to update)
 - `gpc-attValue.tsv`: attribute values
-  - Loaded to https://mix-n-match.toolforge.org/#/catalog/4063 (to update)
 - `gpc-attType.tsv`: attribute types: useless as WD items, too many for WD props
 
 Dependencies:
